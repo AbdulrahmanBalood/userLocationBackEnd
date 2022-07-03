@@ -2,6 +2,7 @@ package com.example.mapstest.service;
 
 import com.example.mapstest.DTO.LocationDTO;
 import com.example.mapstest.DTO.PostDTO;
+import com.example.mapstest.DTO.VisitorDistanceDTO;
 import com.example.mapstest.model.MyUser;
 import com.example.mapstest.model.UserLocation;
 import com.example.mapstest.repository.LocationRepository;
@@ -68,5 +69,27 @@ public class LocationService {
             return true;
         }
         else return false;
+    }
+    public List<PostDTO> getVisitorDistance(VisitorDistanceDTO visitorDistanceDTO){
+        List<MyUser> getAllUsers = userService.getAllUsers();
+        Double userLat =visitorDistanceDTO.getLat();
+        Double userLng = visitorDistanceDTO.getLng();
+        List<PostDTO> post = new ArrayList<>();
+        for(int i = 0; i < getAllUsers.size(); i++){
+            MyUser tempUser = getAllUsers.get(i);
+            Double tempUserLat = tempUser.getUserLocation().getLat();
+            Double temUserLng = tempUser.getUserLocation().getLng();
+            Double distance = Math.acos(Math.sin(Math.PI*userLat/180.0)*Math.sin(Math.PI*tempUserLat/180.0)+Math.cos(Math.PI*userLat/180.0)*Math.cos(Math.PI*tempUserLat/180.0)*Math.cos(Math.PI*temUserLng/180.0-Math.PI*userLng/180.0))*6371;
+            Integer intDistance = (Integer)distance.intValue();
+            PostDTO postDTO = new PostDTO(tempUser.getUsername(),intDistance);
+            post.add(postDTO);
+        }
+        Collections.sort(post, new Comparator<PostDTO>() {
+
+            public int compare(PostDTO o1, PostDTO o2) {
+                return Integer.valueOf(o1.getDistance().compareTo(o2.getDistance()));
+            }
+        });
+        return post;
     }
 }

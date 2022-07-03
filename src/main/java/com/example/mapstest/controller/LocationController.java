@@ -3,6 +3,7 @@ package com.example.mapstest.controller;
 import com.example.mapstest.DTO.LocationDTO;
 import com.example.mapstest.DTO.PostDTO;
 import com.example.mapstest.DTO.ResponseAPI;
+import com.example.mapstest.DTO.VisitorDistanceDTO;
 import com.example.mapstest.model.MyUser;
 import com.example.mapstest.model.UserLocation;
 import com.example.mapstest.service.LocationService;
@@ -27,5 +28,9 @@ public class LocationController {
     @GetMapping("/getdistance/{id}")
     public ResponseEntity<List<PostDTO>> getDistance(@PathVariable Integer id){
         return ResponseEntity.status(200).body(locationService.getDistance(id));
+    }
+    @PostMapping("/getdistancevisitor")
+    public ResponseEntity <List<PostDTO>> getVisitorDistance(@RequestBody VisitorDistanceDTO visitorDistanceDTO){
+        return ResponseEntity.status(200).body(locationService.getVisitorDistance(visitorDistanceDTO));
     }
 }
