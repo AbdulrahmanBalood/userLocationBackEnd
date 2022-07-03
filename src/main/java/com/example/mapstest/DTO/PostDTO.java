@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @Data
 public class PostDTO {
     private String username;
-    private Double distance;
+    private Integer distance;
 }
