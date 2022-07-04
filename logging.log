@@ -1399,3 +1399,36 @@ com.example.mapstest.Exception.UserNotFoundException: User doesn't exist
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
+2022-07-04 01:50:45.923  INFO 39372 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 01:50:45.925  INFO 39372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-04 01:50:45.930  INFO 39372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-04 05:42:07.961  INFO 10520 --- [main] c.example.mapstest.MapstestApplication   : Starting MapstestApplication using Java 17.0.2 on DESKTOP-4GPJKOB with PID 10520 (C:\Users\Abdulrahman\Desktop\mapstest\target\classes started by Abdulrahman in C:\Users\Abdulrahman\Desktop\mapstest)
+2022-07-04 05:42:07.967  INFO 10520 --- [main] c.example.mapstest.MapstestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-07-04 05:42:08.613  INFO 10520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-04 05:42:08.668  INFO 10520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
+2022-07-04 05:42:09.132  INFO 10520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-04 05:42:09.141  INFO 10520 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-04 05:42:09.141  INFO 10520 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-04 05:42:09.230  INFO 10520 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-04 05:42:09.230  INFO 10520 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1221 ms
+2022-07-04 05:42:09.335  INFO 10520 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-04 05:42:09.386  INFO 10520 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-04 05:42:09.518  INFO 10520 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-04 05:42:09.603  INFO 10520 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-04 05:42:09.897  INFO 10520 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-04 05:42:09.908  INFO 10520 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-04 05:42:10.499  INFO 10520 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-04 05:42:10.507  INFO 10520 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 05:42:10.868  WARN 10520 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-04 05:42:11.129  INFO 10520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-04 05:42:11.130  INFO 10520 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-07-04 05:42:11.131  INFO 10520 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@14ba7f15]]
+2022-07-04 05:42:11.131  INFO 10520 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-07-04 05:42:11.140  INFO 10520 --- [main] c.example.mapstest.MapstestApplication   : Started MapstestApplication in 3.56 seconds (JVM running for 4.323)
+2022-07-04 05:43:10.858  INFO 10520 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2022-07-04 05:43:32.036  INFO 10520 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-07-04 05:43:32.036  INFO 10520 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@14ba7f15]]
+2022-07-04 05:43:32.037  INFO 10520 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-07-04 05:43:32.057  INFO 10520 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-04 05:43:32.059  INFO 10520 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-04 05:43:32.065  INFO 10520 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
